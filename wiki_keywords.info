@@ -1,0 +1,7 @@
+name = Wiki Keywords
+description = Макроязык для генерации контента.
+package = Wiki Keywords
+core=7.x
+version = "7.x-1.x-dev"
+project = "test_module"
+datestamp = "1332419400"
