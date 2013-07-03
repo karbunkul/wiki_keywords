@@ -1,5 +1,7 @@
 <?php
 
+// [wk]"mode":"video", "src":"http://217.116.53.25:2095/oflaDemo/20120618_grodno_tagged.flv"[/wk]
+
 class wk{
   private $str;
   private $jwplayer = array();
@@ -24,7 +26,7 @@ class wk{
     $hostname = 'http://' . $_SERVER['HTTP_HOST'] . '/';
     
     if ($hostname == 'http://localhost/'){
-      $hostname .= 'tgasu/';          
+      //$hostname .= 'tgasu/';          
     }
     
     
@@ -32,8 +34,9 @@ class wk{
       'width' => variable_get('wiki_keywords_jwplayer_width', 640),
       'height' => variable_get('wiki_keywords_jwplayer_height', 480),
       'playlist.position' => variable_get('wiki_keywords_jwplayer_playlist_position', t('none')),
-      'flashplayer' =>$hostname . $this->jwplayer['path'] . '/player.swf',
-      'skin' =>$hostname . $this->jwplayer['path'] . '/skins/beelden.zip',
+      'flashplayer' =>$hostname . $this->jwplayer['path'] . '/jwplayer.flash.swf',
+      'html5player' =>$hostname . $this->jwplayer['path'] . '/jwplayer.html5.js',
+      //'skin' =>$hostname . $this->jwplayer['path'] . '/skins/beelden.zip',
       
     ); 
     
